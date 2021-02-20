@@ -4,9 +4,10 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const cors = require("cors");
+
 require("dotenv/config");
 //middleware
-app.use(cors);
+app.use(cors());
 app.options("*", cors());
 app.use(bodyParser.json()); // Membuat program mengerti bahwa akan ada file JSON yang dikirim dari frontend
 app.use(morgan("tiny"));
